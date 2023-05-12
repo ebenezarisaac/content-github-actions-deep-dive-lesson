@@ -6,6 +6,12 @@ on:
       - main
 # Jobs
 jobs:
+  printvars:
+    runs-on: ubuntu-lates
+    steps:
+      - name: print vars
+        run: |
+            echo ${{ secrets.AWS_ACCOUNT_ID }}
   lint:
     runs-on: ubuntu-latest
     steps:
